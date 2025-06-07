@@ -14,3 +14,13 @@ The challenges are:
    Computes the mobile money transaction fee using a 1.5% rule, with min and max fee limits.
 
 Each challenge prompts the user for input, performs calculations, and displays user-friendly output in the console.
+
+
+# Author
+
+Cassy Omondi
+
+# License
+
+This project is licensed under the MIT License.
+
