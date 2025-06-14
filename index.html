@@ -2,19 +2,56 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>JS Assignment Outputs</title>
+  <title>Code Challenge</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
+
 <body>
-  <h1>Welcome to Your JavaScript App</h1>
+  <div class="container">
+    <h1>Welcome To Cassy's Code Challenge!</h1>
+    <p>Select a calculator, enter a value, and press Calculate:</p>
 
-  <button onclick="calculateChaiIngredients()">Chai Ingredients</button>
-  <button onclick="calculateBodaFare()">Boda Fare</button>
-  <button onclick="estimateTransactionFee()">Transaction Fee</button>
+    <label for="calculatorType">Choose Calculator:</label><br>
+    <select id="calculatorType">
+      <option value="chai">Chai Ingredients</option>
+      <option value="boda">Boda Fare</option>
+      <option value="fee">Transaction Fee</option>
+    </select><br><br>
 
-  <div id="output" style="margin-top: 30px; font-family: sans-serif;"></div>
+    <label for="inputValue">Enter Value:</label><br>
+    <input type="number" id="inputValue"><br><br>
 
-  <script src="chai.js"></script>
-  <script src="fare.js"></script>
-  <script src="fee.js"></script>
+    <button onclick="handleCalculate()">Calculate</button>
+
+    <div id="output" class="output" style="margin-top: 20px;"></div>
+  </div>
+
+  <!-- link to javascript functions -->
+  <script src="chaiCalculator/chai.js"></script>
+  <script src="bodaFareCalculator/fare.js"></script>
+  <script src="mobileMoneyEstimator/fee.js"></script>
+
+  <!-- internal javascript to calculate according to button selected -->
+  <script>
+  function handleCalculate() {
+    const type = document.getElementById("calculatorType").value;
+    const input = Number(document.getElementById("inputValue").value);
+    const output = document.getElementById("output");
+
+    let result;
+
+    if (type === "chai") {
+      result = calculateChaiIngredients(input);
+    } else if (type === "boda") {
+      result = calculateBodaFare(input);
+    } else if (type === "fee") {
+      result = estimateTransactionFee(input);
+    }
+
+    output.innerText = result;
+  }
+</script>
 </body>
 </html>
+
+
