@@ -32,7 +32,7 @@ Each calculator demonstrates the use of core JavaScript concepts like variables,
 
 ### View Live Site
 
-Visit the deployed application at: **https://evansveryown.github.io/Code-Challenge-1/**
+Visit the deployed application at: **https://cassyomondi.github.io/Code-Challenge-1/**
 
 You can:
 - Choose a calculator (Chai, Boda, or Transaction Fee)
@@ -45,7 +45,7 @@ If you'd like to run the project locally:
 
 #### 1. Clone the repository:
 ```bash
-git clone https://github.com/evansveryown/Code-Challenge-1.git
+git clone https://github.com/cassyomondi/Code-Challenge-1.git
 
 Or download the ZIP and extract it.
 ```
